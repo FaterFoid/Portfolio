@@ -1,0 +1,128 @@
+<!doctype html>
+<Head>
+	<link rel="stylesheet" href="portfolioStyleSheet.css">
+  </head>
+  <main id="main-doc">
+  
+    <section id="html_and_CSS" class="main-section">
+      <header>Html and CSS</header>
+      <p>hgdvhgsvhgc  dvcghs hgv cdg gcvdsghvc SGV CGDV G VGCVAVDSGHV SDH CS DCG GVASDHCG VGSDV CG VG VGCA VGCV G  CGDAVCHGAVSGC AGC GVCHGA</p>
+
+    </section>
+    <section id="javascript" class="main-section">
+      <header>JavaScript</header>
+        <p>
+        wbhjcb wh ch bchjdb ejhc h hebchbjhdbh  dcheb hd hb dch dhcbhbdcheb hj cdhb dehcb hjbcjd ebhc b
+        </p>
+    </section>
+    <section id="java" class="main-section">
+      <header>Java</header>
+      <p>
+	    herf jhf ej hkjhkjhe kj fejh jfkeh fjk
+        <ul>
+          <li>vcfwg  ew df dgf dewgfwedhfehdgf dgew dewfw hgfdwg fd gwfedhggwefd hd wfdgwfehgdfw </li>
+      </ul>
+      </p>
+    </section>
+    <section id="python" class="main-section">
+      <header>Python</header>
+      <p>
+	  Learn to code — for free.
+Build projects.
+
+Earn certifications.
+
+Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten jobs at tech companies including:
+
+As seen in:
+
+Here is what our alumni say about freeCodeCamp:
+Shawn Wang How to use CSS class/id to change other classes attributes? [closed]
+Asked 8 years, 11 months ago
+Modified 8 years, 11 months ago
+Viewed 35k times
+
+2
+
+
+Closed. This question does not meet Stack Overflow guidelines. It is not currently accepting answers.
+Questions asking for code must demonstrate a minimal understanding of the problem being solved. Include attempted solutions, why they didn't work, and the expected results. See also: Stack Overflow question checklist
+
+Closed 8 years ago.
+
+So I want to :hover on an element and I want the hovering to change an attribute of another class. How do I do it? I want to hover on to a button and it to change other div's display to display: block. I use only HTML and CSS.
+
+cssclasshtmlhover
+Share
+Improve this question
+Follow
+asked Dec 11, 2013 at 14:47
+Nikolas's user avatar
+Nikolas
+49522 gold badges55 silver badges77 bronze badges
+What does your HTML look like? What CSS have you tried? – 
+j08691
+ Dec 11, 2013 at 14:48
+I have not tried anything, because I don't know how to change another classes attributes in another class.. EDIT: To clarify, I don't even know what to try. – 
+Nikolas
+ Dec 11, 2013 at 14:49 
+2
+Without a bare example of the code (even just the markup is a good start) you're trying to use so far, you're unlikely to find much help. Just so you know, however, it's unlikely you can get what you're looking for, as you shouldn't nest a div in a button object, so you won't be able to use parent-child relationships in your CSS to trigger a switch. You'll need to use some Javascript in all likelihood to get this to happen. – 
+Jason M. Batchelor
+ Dec 11, 2013 at 14:54 
+Add a comment
+4 Answers
+Sorted by:
+
+Highest score (default)
+
+9
+
+
+You are limited by css, but there are possibilities with css selectors. I've made you a jsfiddle with a possible solution:
+
+http://jsfiddle.net/6rT3Q/
+
+CSS:
+
+.item1:hover ~ .item3 {
+    background-color: red;
+}
+HTML
+
+<div class="item1">
+    Hoverable item
+</div>
+
+<div class="item2">
+    Dummy item
+</div>
+
+<div class="item3">
+    Item to change
+</div>
+Here the ~ tells to look for succeeding el
+        The skj  sjkc sjc sahuhis dc dsuch auisdhcnjcdnkjn cd  cd kcn kjnkjdn cj sc njcn ksjdncuwne cdjncjnskjadcnjskndcakn
+      </p>
+    </section>
+    <nav id="navbar">
+	  <div class="tech_page_links">
+			<header class="nav-link">
+				Technical Page Links
+			</header>
+	  </div>
+	  <div class="tech_page_links">
+			<a href="#html_and_CSS" class="nav-link">Html and CSS</a> 
+	  </div>
+	  <div class="tech_page_links">
+			<a href="#javascript" class="nav-link">Javascript</a>
+	  </div>
+	  <div class="tech_page_links">
+			<a href="#java" class="nav-link">Java</a>
+	  </div>
+	  <div class="tech_page_links">
+			<a href="#python" class="nav-link">Python</a>
+	  </div>
+    </nav>
+  </main>
+</html>
